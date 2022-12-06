@@ -18,7 +18,7 @@ const ProductAll = () => {
 
   const getProducts = async () => {
     let keyword = query.get('q') || '';
-    let url = `http://localhost:4000/products/?q=${keyword}`;
+    let url = `https://my-json-server.typicode.com/HyeL99/ReactShoppingMall/products/?q=${keyword}`;
     let response = await fetch(url);  //브라우저가 네트워크에 요청을 보내고, 프로미스 객체가 반환됨
     let data = await response.json();
     setProductsList(data);
